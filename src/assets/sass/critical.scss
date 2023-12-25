@@ -4,17 +4,20 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-1300 {
+    #hero-1295 {
         /* 150px - 350px */
         padding: clamp(9rem, 30.95vw, 21.875rem) calc(16 / 16 * 1rem);
         padding-bottom: 0;
         position: relative;
         z-index: 1;
+        /* prevents overflow from the images sitting outside the screen */
+        overflow: hidden;
 
         .cs-container {
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
             margin: auto;
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -128,97 +131,15 @@
             }
         }
 
-        .cs-card-group {
-            width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
-            /* changes to -550px at tablet */
-            margin: 0 0 calc(-650 / 16 * 1rem) 0;
-            padding: 0 calc(16 / 16 * 1rem);
-            /* prevents padding and border from affecting height and width */
-            background-color: #fff;
-            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            position: relative;
-            z-index: 15;
-        }
-
-        .cs-item {
-            text-align: left;
-            list-style: none;
-            width: 100%;
-            border-bottom: 1px solid #e8e8e8;
-            box-sizing: border-box;
-            grid-column: span 12;
-            transition:
-                background-color 0.3s,
-                border-color 0.3s;
-
-            &:last-of-type {
-                border-bottom: none;
-            }
-        }
-
-        .cs-link {
-            text-decoration: none;
-            /* 24px - 60px top & Bottom */
-            /* 24px - 16px top & Bottom */
-            padding: clamp(1.5rem, 5.3vw, 3.75rem) clamp(1rem, 2.7vw, 2.5rem);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
-        .cs-icon {
-            /* 32px - 40px */
-            height: clamp(2rem, 4vw, 2.5rem);
-            width: auto;
-            margin: 0 0 calc(16 / 16 * 1rem) 0;
-        }
-
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 2vw, 1.5625rem);
-            font-weight: 700;
-            text-align: inherit;
-            line-height: 1.2em;
-            margin: 0 0 calc(12 / 16 * 1rem) 0;
-            color: var(--headerColor);
-            transition: color 0.3s;
-        }
-
-        .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            text-align: inherit;
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            transition:
-                color 0.3s,
-                opacity 0.3s;
-        }
-
-        .cs-floater-wrapper {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
         .cs-floater {
             width: calc(1090 / 16 * 1rem);
             height: auto;
             opacity: 0.1;
-            display: block;
+            display: none;
             position: absolute;
-            left: 0;
-            bottom: 0;
+            right: 0;
+            top: 4%;
+            z-index: 1;
         }
 
         .cs-background {
@@ -259,17 +180,11 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #hero-1300 {
+    #hero-1295 {
         padding-bottom: calc(150 / 16 * 1rem);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* 50px - 90px */
-        gap: clamp(3.125rem, 10vw, 5.625rem);
 
         .cs-container {
-            justify-content: flex-end;
+            justify-content: flex-start;
             flex-direction: row;
         }
 
@@ -279,44 +194,14 @@
             align-items: flex-start;
         }
 
-        .cs-picture-wrapper {
-            width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
-            height: 100%;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
         .cs-picture {
-            width: 56%;
-            /* 50px - 170px */
-            margin-right: clamp(3.125rem, 12vw, 10.625rem);
+            width: 50%;
             position: absolute;
-            bottom: 0;
-            right: 50%;
-            z-index: 10;
+            bottom: calc(-151 / 16 * 1rem);
+            right: calc(-50 / 16 * 1rem);
         }
 
-        .cs-card-group {
-            margin: 0 0 calc(-350 / 16 * 1rem) 0;
-            padding: 0;
-        }
-
-        .cs-item {
-            grid-column: span 4;
-            border-bottom: none;
-            border-right: 1px solid #e8e8e8;
-
-            &:nth-of-type(3) {
-                border-bottom: none;
-                border-right: none;
-            }
-        }
-
-        .cs-floater-wrapper {
+        .cs-floater {
             display: block;
         }
 
@@ -326,7 +211,7 @@
             &:before {
                 opacity: 1;
                 background: linear-gradient(
-                    270deg,
+                    89deg,
                     rgba(255, 255, 255, 0.96) 47.66%,
                     rgba(255, 255, 255, 0) 71.43%
                 );
@@ -337,55 +222,20 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #hero-1300 {
-        .cs-card-group {
-            margin: 0 0 calc(-300 / 16 * 1rem) 0;
-            padding: 0;
-        }
-
-        .cs-item {
-            &:hover {
-                background-color: #1a1a1a;
-                border-color: #1a1a1a;
-
-                .cs-h3,
-                .cs-item-text {
-                    color: var(--bodyTextColorWhite);
-                }
-
-                .cs-item-text {
-                    opacity: 0.8;
-                }
-            }
-
-            &:last-of-type {
-                border: none;
-            }
-        }
-
+    #hero-1295 {
         .cs-floater {
-            left: 40%;
-            right: auto;
+            right: clamp(45%, 50vw, 55%);
             top: auto;
             bottom: 0;
         }
     }
 }
 
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #hero-1300 {
-        .cs-picture {
-            bottom: calc(100 / 16 * 1rem);
-        }
-    }
-}
-
 /* Large Desktop - 1600px (Parallax Effect) */
 @media only screen and (min-width: 100rem) {
-    #hero-1300 {
+    #hero-1295 {
         .cs-background {
-            background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg");
+            background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/buildings.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -401,55 +251,19 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #hero-1300 {
+        #hero-1295 {
             background-color: rgba(0, 0, 0, 0.8);
-
+            .cs-topper {
+                color: var(--primaryLight);
+            }
             .cs-title {
                 color: var(--bodyTextColorWhite);
             }
-
             .cs-text {
                 color: var(--bodyTextColorWhite);
                 opacity: 0.9;
             }
 
-            .cs-card-group {
-                background-color: var(--dark);
-            }
-
-            .cs-item {
-                border-color: rgba(255, 255, 255, 0.1);
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.6);
-                    border-color: rgba(0, 0, 0, 0.6);
-                }
-            }
-
-            .cs-h3,
-            .cs-item-text {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-item-text {
-                opacity: 0.8;
-            }
-
-            .cs-background {
-                opacity: 0.15;
-
-                &:before {
-                    opacity: 0.5;
-                    background: #000;
-                }
-            }
-        }
-    }
-}
-
-/* Dark Mode Tablet and Up Only */
-@media only screen and (min-width: 48rem) {
-    body.dark-mode {
-        #hero-1300 {
             .cs-background {
                 opacity: 0.15;
 
@@ -466,3 +280,4 @@
     }
 }
 
+                                

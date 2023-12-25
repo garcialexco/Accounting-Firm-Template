@@ -49,7 +49,7 @@ Doing this will complete the overlapping "breaking the container" look.
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1300">
+<section id="hero-1295">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Welcome to Invetex</span>
@@ -60,15 +60,84 @@ Doing this will complete the overlapping "breaking the container" look.
             <a href="" class="cs-button-solid">Free Consultation</a>
         </div>
         <!--To make your own background crops of people use https://www.remove.bg/-->
-        <div class="cs-picture-wrapper">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png">
+            <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png" alt="accountant" width="468" height="658">
+        </picture>
+    </div>
+    <!--Floating Arrow-->
+    <img class="cs-floater" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-3.svg" alt="graphic" width="956" height="708">
+    <!--Background Image, background image added in CSS at 1600px wide for parallax effect-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/buildings-t.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/buildings.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/buildings.jpg" alt="buildings" width="1280" height="568">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1308">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--Floating Box-->
+            <div class="cs-box">
+                <span class="cs-desc">Accounting &  support of your business</span>
+            </div>
+            <!--Image-->
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png">
-                <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant15.png" alt="accountant" width="468" height="658">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/tax1.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
             </picture>
         </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Get Help on Finance</h2>
+            <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+            <ul class="cs-ul">
+                <li class="cs-item">
+                    <span class="cs-number">150 +</span>
+                    <h3 class="cs-h3">Staff on three continents</h3>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">700 +</span>
+                    <h3 class="cs-h3">Consulting engagements</h3>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">180 +</span>
+                    <h3 class="cs-h3">Learning community members</h3>
+                </li>
+            </ul>
+        </div>
     </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1302">
     <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Professional Tax & Accounting Services</h2>
+            </div>
+            <p class="cs-text">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+            </p>
+        </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <a href="" class="cs-link">
@@ -99,19 +168,6 @@ Doing this will complete the overlapping "breaking the container" look.
             </li>
         </ul>
     </div>
-    <!--Floating Arrow-->
-    <!--We wrap it in a picture element wrapper so we can use the wrapper as a box for it to live inside of instead of the section wrapper. This allows us to add overflow:hidden to the wrapper to cut off the graphic at the edge of the screen. If we added overflow:hidden to the section container it would clip the overlapping service cards. So we add this wrapper to allow us to clip only the graphic. -->
-    <picture class="cs-floater-wrapper">
-        <img class="cs-floater" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-arrow-reversed.svg" alt="graphic" width="956" height="708">
-    </picture>
-    <!--Background Image, background image added in CSS at 1600px wide for parallax effect-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-t-reversed2.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/buildings-reversed2.jpg" alt="buildings" width="1280" height="568">
-    </picture>
 </section>
 
 
